@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-brand: #ccff00;
+  --color-brand-dark: #aadd00;
+  --color-dark: #09090b;
+  --color-dark-pure: #000000;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-dark-pure text-white antialiased selection:bg-brand selection:text-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-black tracking-tighter uppercase italic;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand hover:bg-brand-dark text-black px-8 py-3 rounded-xl font-extrabold uppercase transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(204,255,0,0.2)] hover:shadow-[0_0_25px_rgba(204,255,0,0.3)] duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white px-8 py-3 rounded-xl font-extrabold uppercase transition-all flex items-center justify-center gap-2;
+  }
+  
+  .btn-outline {
+    @apply border border-zinc-800 hover:border-zinc-700 bg-white/5 hover:bg-white/10 backdrop-blur-md px-8 py-3 rounded-xl font-extrabold uppercase transition-all flex items-center justify-center gap-2;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .glass {
+    @apply bg-zinc-950/80 backdrop-blur-xl border border-zinc-800/50;
+  }
+
+  .card-premium {
+    @apply bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-zinc-700 transition-all duration-300;
+  }
+
+  .stat-card {
+    @apply border-l-[3px] border-brand bg-zinc-950/50 p-6 rounded-2xl;
+  }
+}

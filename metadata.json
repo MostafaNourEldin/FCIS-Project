@@ -1,0 +1,6 @@
+{
+  "name": "IRON & GRIT",
+  "description": "Premium E-commerce store for extreme gym sportswear and fitness apparel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
